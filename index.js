@@ -4,7 +4,8 @@ var ews = require('node-ews'),
     options = require('node-getopt').create([
       ['h', 'host=ARG', 'Exchange host'],
       ['u', 'username=ARG', 'Username'],
-      ['p', 'password=ARG', 'Password']
+      ['p', 'password=ARG', 'Password'],
+      ['', 'target=ARG', 'Target user to impersonate']
     ]).parseSystem().options,
     util = require('util');
 
@@ -32,7 +33,18 @@ ews.run('FindItem', {
       }
     }
   }
-}, function(err, result) {
+}, [{
+  RequestServerVersion: {
+    attributes: {
+      Version: 'Exchange2010'
+    }
+  },
+  ExchangeImpersonation: {
+    ConnectingSID: {
+      SmtpAddress: options.target
+    }
+  }
+}], function(err, result) {
   console.log(util.inspect(err));
   console.log(util.inspect(result, false, null));
 });
