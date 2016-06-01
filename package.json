@@ -20,7 +20,7 @@
     "url": "https://github.com/linagora/ews-query/issues"
   },
   "dependencies": {
-    "node-ews": "~1.2.1",
+    "node-ews": "linagora/node-ews#waiting-merges",
     "node-getopt": "~0.2.3"
   }
 }
