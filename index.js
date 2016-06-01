@@ -17,7 +17,14 @@ ews.run('FindItem', {
     Traversal: 'Shallow'
   },
   ItemShape: {
-    BaseShape: 'IdOnly'
+    BaseShape: 'IdOnly',
+    AdditionalProperties: {
+      FieldURI: {
+        attributes: {
+          FieldURI: 'item:Subject'
+        }
+      }
+    }
   },
   CalendarView: {
     attributes: {
