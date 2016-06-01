@@ -1,0 +1,26 @@
+{
+  "name": "ews-query",
+  "version": "0.0.0",
+  "description": "Sandbox to explore querying EWS though node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/linagora/ews-query.git"
+  },
+  "keywords": [
+    "ews",
+    "node"
+  ],
+  "author": "Linagora <lgs-openpaas-dev@linagora.com>",
+  "license": "AGPLv3",
+  "bugs": {
+    "url": "https://github.com/linagora/ews-query/issues"
+  },
+  "dependencies": {
+    "node-ews": "~1.2.1",
+    "node-getopt": "~0.2.3"
+  }
+}
